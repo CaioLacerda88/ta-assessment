@@ -12,11 +12,3 @@ Examples:
 |search       |firstResult                                      |
 |Ronaldo      |Ronaldo Nazário – Wikipédia, a enciclopédia livre|
 |Rivaldo Vitor|Rivaldo – Wikipédia, a enciclopédia livre        |
-
-Scenario: User must be able to search in google
-Given I searched on google for 'search'
-Then I should see first result as 'firstResult'
-Examples:
-|search       |firstResult                                      |
-|Ronaldo      |Ronaldo Nazário – Wikipédia, a enciclopédia livre|
-|Rivaldo Vitor|Rivaldo – Wikipédia, a enciclopédia livre        |

@@ -21,7 +21,10 @@ public abstract class AbstractStoryConfiguration extends JUnitStories {
 
 	public AbstractStoryConfiguration() {
 		context = getAnnotatedApplicationContext();
+		configureEmbedder();
+	}
 
+	private void configureEmbedder() {
 		Embedder embedder = configuredEmbedder();
 		embedder.embedderControls().doIgnoreFailureInStories(true).useStoryTimeouts(DEFAULT_STORY_TIMEOUT_SECS)
 				.doFailOnStoryTimeout(false).doGenerateViewAfterStories(true).doIgnoreFailureInView(false)
@@ -30,7 +33,6 @@ public abstract class AbstractStoryConfiguration extends JUnitStories {
 
 	@Override
 	public Configuration configuration() {
-
 		StoryReporterBuilder reporterBuilder = new StoryReporterBuilder().withFormats(storyFormat())
 				.withFailureTraceCompression(true);
 

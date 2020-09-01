@@ -21,7 +21,7 @@ public class AllStories extends AbstractStoryConfiguration {
 	@Override
 	public List<String> storyPaths() {
 		List<String> paths = new StoryFinder().findPaths(CodeLocations.codeLocationFromClass(this.getClass()),
-				"**/stories/searchGoogle.story", "");
+				"**/stories/loginNetshoes.story, **/stories/searchGoogle.story", "");
 		return paths;
 	}
 }
